@@ -4,6 +4,7 @@ import bemCssModules from 'bem-css-modules'
 
 import {default as ContentStyles } from './Content.module.scss'
 
+import AdminPanel from '../AdminPanel/AdminPanel';
 import Courses from '../Courses/Courses';
 import { StoreContext } from '../../store/StorePrivider';
 import UserCourses from '../UserCourses/UserCourses';
@@ -31,7 +32,7 @@ const Content = () => {
         />}
         {isAdmin && <Route 
           path="/manage-courses" 
-          element={<p>Admin</p> /*<Courses/>*/}
+          element={<AdminPanel/>}
         />}
         <Route 
           path="*" 
